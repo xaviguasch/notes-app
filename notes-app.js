@@ -18,9 +18,6 @@ const renderNotes = function (notes, filters) {
     return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
   })
 
-  console.log('====================================');
-  console.log(filteredNotes);
-  console.log('====================================');
   
 
   document.querySelector('#notes').innerHTML = ''
@@ -51,10 +48,10 @@ document.querySelector('#search-text').addEventListener('input', function (e) {
   renderNotes(notes, filters)  
 })
 
-document.querySelector('#for-fun').addEventListener('change', function (e) {
-  console.log(e.target.checked) // it's a boolean
 
-
+document.querySelector('#filter-by').addEventListener('change', function (e) {
+  console.log(e.target.value);
+  
 
 })
 
