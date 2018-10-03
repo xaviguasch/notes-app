@@ -5,13 +5,6 @@ const filters = {
 }
 
 
-
-
-
-
-
-
-
 renderNotes(notes, filters)
 
 
@@ -20,7 +13,6 @@ document.querySelector('#create-note').addEventListener('click', function (e) {
     title: '',
     body: ''
   })
-  // localStorage.setItem('notes', JSON.stringify(notes))
   saveNotes(notes)
   renderNotes(notes, filters)
 })
