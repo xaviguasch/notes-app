@@ -49,7 +49,7 @@ const generateNoteDOM = function (note) {
   
   
   // Setup the note title text
-  if (note.title.length < 0) {
+  if (note.title.length > 0) {
     textEl.textContent = note.title
   } else {
     textEl.textContent = 'Unnamed note'
