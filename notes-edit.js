@@ -4,9 +4,9 @@ const removeElement = document.querySelector('#remove-note')
 
 const noteId = location.hash.substring(1)
 
-const notes = getSavedNotes()
+let notes = getSavedNotes()
 
-const note = notes.find(function (note) {
+let note = notes.find(function (note) {
   return note.id === noteId
 })
 
@@ -45,8 +45,23 @@ removeElement.addEventListener('click', function (e) {
 
 
 
+window.addEventListener('storage', function (e) {
+  if (e.key === 'notes') {
+    notes = JSON.parse(e.newValue)
 
-// 1. Setup input event for title
-// 2. Update note object and save notes list
-// 3. Repeat steps 1-2 for body
-// 4. Setup a remove button that removes notes and sends uses back to home page
+    note = notes.find(function (note) {
+      return note.id === noteId
+    })
+    
+    
+    
+    if (note === undefined) {
+      location.assign('/index.html')
+    }
+    
+    titleElement.value = note.title
+    
+    bodyElement.value = note.body
+  }
+  
+})
