@@ -123,6 +123,4 @@ const renderNotes = (notes, filters) => {
 
 
 // Generate the last edited message
-const generateLastEdited = function (timestamp) {
-  return `Last edited ${moment(timestamp).fromNow()}`
-}
+const generateLastEdited = (timestamp) => `Last edited ${moment(timestamp).fromNow()}`
