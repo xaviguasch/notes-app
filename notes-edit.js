@@ -1,29 +1,19 @@
-// 1. Add a DOM element between the title and body inputs (empty span)
-// 2. Set text value: Last edited 4 hours ago
-// 3. Update value on title/body/storage change
+
 
 
 const titleElement = document.querySelector('#note-title')
 const bodyElement = document.querySelector('#note-body')
 const removeElement = document.querySelector('#remove-note')
 const dateElement = document.querySelector('#last-edited')
-
-
-
-
-
-
 const noteId = location.hash.substring(1)
-
 let notes = getSavedNotes()
-
 let note = notes.find((note) => note.id === noteId)
 
 
 
 
 
-if (note === undefined) {
+if (!note) {
   location.assign('/index.html')
 }
 
@@ -64,7 +54,7 @@ window.addEventListener('storage', (e) => {
     
     
     
-    if (note === undefined) {
+    if (!note) {
       location.assign('/index.html')
     }
     

@@ -42,22 +42,3 @@ window.addEventListener('storage', (e) => {
 
 
 
-// 1. Add createdAt and updatedAt to the new notes (store timestamp)
-// 2. Update updatedAt when someone edits a title or body
-// 3. Delete all old notes before testing
-
-
-
-// const now = moment()
-// now.subtract(1, 'week').subtract(20, 'days')
-// console.log(now.format());
-// // November 3rd, 2003
-// console.log(now.format('MMMM Do, YYYY'));
-// console.log(now.fromNow());
-
-// const nowTimeStamp = now.valueOf()
-// console.log(moment(nowTimeStamp).toString());
-
-
-// const anniversary = moment().year(1985).month(2).date(25)
-// console.log(anniversary.format('MMM D, YYYY'));
